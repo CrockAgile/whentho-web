@@ -16,20 +16,18 @@ main =
         , subscriptions = subscriptions
         , onUrlRequest = UrlRequested
         , onUrlChange = UrlChanged
-    }
+        }
 
 
-type alias Model  =
+type alias Model =
     { key : Nav.Key
     , url : Url.Url
     }
 
 
-
-
-init : () -> Url.Url -> Nav.Key -> (Model, Cmd Msg)
+init : () -> Url.Url -> Nav.Key -> ( Model, Cmd Msg )
 init flags url key =
-    (Model key url, Cmd.none)
+    ( Model key url, Cmd.none )
 
 
 type Msg
@@ -39,14 +37,14 @@ type Msg
     | UrlChanged Url.Url
 
 
-update : Msg -> Model -> (Model, Cmd Msg)
+update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         Msg1 ->
-            (model, Cmd.none)
+            ( model, Cmd.none )
 
         Msg2 ->
-            (model, Cmd.none)
+            ( model, Cmd.none )
 
         UrlRequested urlRequest ->
             case urlRequest of
@@ -68,13 +66,10 @@ subscriptions _ =
 
 
 view : Model -> Browser.Document Msg
-view _  =
+view _ =
     { title = "WhenTho?"
     , body =
         [ div []
             [ text "WhenTho? 0.0" ]
-      ]
+        ]
     }
-
-
-
