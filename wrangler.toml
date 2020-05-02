@@ -1,0 +1,15 @@
+
+name = 'whentho-web-development'
+type = 'webpack'
+account_id = 'f662588e1b414d6188fce196fd7e6d66'
+zone_id = '504b4d349429345f123b3736d588c034'
+route = 'https://development.whentho.xyz/*'
+vars = { NODE_ENV = "production" }
+
+[site]
+bucket = "public"
+entry-point = "workers-site"
+
+[env.production]
+name = 'whentho-web-production'
+route = 'https://whentho.xyz/*'
