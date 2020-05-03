@@ -70,6 +70,6 @@ view _ =
     { title = "WhenTho?"
     , body =
         [ div []
-            [ text "WhenTho? 0.0" ]
+            [ text "WhenTho? 0.1" ]
         ]
     }
