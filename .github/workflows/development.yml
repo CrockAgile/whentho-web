@@ -17,3 +17,17 @@ jobs:
       - run: npm run build
       - run: npm run lint
       - run: CF_API_TOKEN=${{ secrets.CF_API_TOKEN }} npm run deploy
+      - name: Lighthouse Check
+        id: lighthouseCheck
+        uses: foo-software/lighthouse-check-action@v1
+        with:
+          urls: "https://development.whentho.xyz"
+      - name: Check Lighthouse Results
+        uses: foo-software/lighthouse-check-status-action@master
+        with:
+          lighthouseCheckResults: ${{ steps.lighthouseCheck.outputs.lighthouseCheckResults }}
+          minAccessibilityScore: "90"
+          minBestPracticesScore: "50"
+          minPerformanceScore: "50"
+          minProgressiveWebAppScore: "50"
+          minSeoScore: "50"
