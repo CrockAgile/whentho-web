@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/index.html",
   "scripts": {
-    "build": "elm make src/Main.elm --output=public/index.html",
+    "build": "elm make --optimize src/Main.elm --output=public/main.js",
     "dev": "elm reactor",
     "lint": "elm-format src/ --validate",
     "format": "elm-format src/ --yes",
