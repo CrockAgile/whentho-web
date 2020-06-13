@@ -6,5 +6,7 @@ repl-temp-*
 .cache
 
 node_modules
-dist
+dist/*.js
+dist/*.html
+dist/*.map
 worker

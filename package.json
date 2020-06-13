@@ -4,9 +4,8 @@
   "description": "",
   "main": "dist/index.html",
   "scripts": {
-    "build": "parcel build src/index.html src/robots.txt",
-    "dev": "parcel src/index.html src/robots.txt",
-    "clean": "rm -rf dist & rm -rf .cache",
+    "build": "parcel build src/index.html",
+    "dev": "parcel src/index.html",
     "lint": "elm-format src/ --validate",
     "format": "elm-format src/ --yes",
     "test": "elm-test",
