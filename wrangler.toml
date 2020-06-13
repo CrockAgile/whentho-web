@@ -7,7 +7,7 @@ route = 'https://development.whentho.xyz/*'
 vars = { NODE_ENV = "production" }
 
 [site]
-bucket = "public"
+bucket = "dist"
 entry-point = "workers-site"
 
 [env.production]
